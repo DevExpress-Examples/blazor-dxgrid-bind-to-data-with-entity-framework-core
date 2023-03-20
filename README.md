@@ -3,28 +3,25 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1154623)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Product/Platform - Task
+# Grid for Blazor - How to bind the component to data with Entity Framework Core
 
-This is the repository template for creating new examples. Describe the solved task here.
+This example demonstrates how to use [Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/) to bind the [DevExpress Blazor Grid](https://docs.devexpress.com/Blazor/403143/grid) to data.
 
-Put a screenshot that illustrates the result here.
+![Bind DevExpress Blazor Grid to Data with Entity Framework Core](/images/bind-to-data.png)
 
-Then, add implementation details (steps, code snippets, and other technical information in a free form), or add a link to an existing document with implementation details. 
+Refer to the following topic for more information: [Bind Components to Data with Entity Framework Core](https://docs.devexpress.com/Blazor/403167/common-concepts/bind-data-grid-to-data-from-entity-framework-core).
 
-## Files to Look At
+## Files to Review
 
-- link.cs (VB: link.vb)
-- link.js
-- ...
+- [Index.razor](./CS/Pages/Index.razor)
+- [Program.cs](./CS/Program.cs)
 
 ## Documentation
 
-- link
-- link
-- ...
+- [Get Started with the Grid](https://docs.devexpress.com/Blazor/403625/grid/get-started-with-grid)
+- [Bind the Grid to Data](https://docs.devexpress.com/Blazor/403737/grid/bind-to-data)
 
 ## More Examples
 
-- link
-- link
-- ...
+- [Grid for Blazor - How to bind the Web API Service](https://github.com/DevExpress-Examples/blazor-DxGrid-Bind-To-Web-Api-Service)
+- [Grid for Blazor - How to post changes to an in-memory data source](https://github.com/DevExpress-Examples/blazor-dxgrid-post-changes-to-data-source)
