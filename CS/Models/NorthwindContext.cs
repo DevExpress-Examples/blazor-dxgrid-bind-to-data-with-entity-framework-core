@@ -41,7 +41,7 @@ public partial class NorthwindContext : DbContext {
         }
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder) {
-        modelBuilder.UseCollation("Cyrillic_General_CI_AS");
+        modelBuilder.UseCollation("SQL_Latin1_General_CP1_CI_AS");
         modelBuilder.Entity<AlphabeticalListOfProduct>(entity => {
             entity
                 .HasNoKey()
