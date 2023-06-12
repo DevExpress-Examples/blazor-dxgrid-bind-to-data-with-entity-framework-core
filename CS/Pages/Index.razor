@@ -16,7 +16,8 @@
         <DxGridDataColumn FieldName="HireDate" />
     </Columns>
     <EditFormTemplate Context="editFormContext">
-        <DxFormLayoutItem Caption="First Name:">
+        <DxFormLayout>
+            <DxFormLayoutItem Caption="First Name:">
                 @editFormContext.GetEditor("FirstName")
             </DxFormLayoutItem>
             <DxFormLayoutItem Caption="Last Name:">
@@ -28,6 +29,7 @@
             <DxFormLayoutItem Caption="Hire Date:">
                 @editFormContext.GetEditor("HireDate")
             </DxFormLayoutItem>
+        </DxFormLayout>
     </EditFormTemplate>
 </DxGrid>
 
