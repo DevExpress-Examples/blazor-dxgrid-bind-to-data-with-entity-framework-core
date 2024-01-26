@@ -5,6 +5,7 @@
 @implements IDisposable
 
 <DxGrid Data="Data"
+        CustomizeEditModel="OnCustomizeEditModel"
         EditModelSaving="OnEditModelSaving"
         DataItemDeleting="OnDataItemDeleting"
         KeyFieldName="EmployeeId">
@@ -42,16 +43,24 @@
         Data = await Northwind.Employees.ToListAsync();
     }
 
+    void OnCustomizeEditModel(GridCustomizeEditModelEventArgs e) {
+        if(e.IsNew) {
+            var editModel = (Employee)e.EditModel;
+            editModel.EmployeeId = Data.Count() + 1;
+        }
+    }
+
     async Task OnEditModelSaving(GridEditModelSavingEventArgs e) {
         var editModel = (Employee)e.EditModel;
         // Re-query a data item from the database.
-        var dataItem = e.IsNew ? new Employee() : Northwind.Employees.Find(editModel.EmployeeId);
+        var dataItem = e.IsNew ? editModel : Northwind.Employees.Find(editModel.EmployeeId);
         // Assign changes from the edit model to the data item.
         if (dataItem != null) {
             dataItem.FirstName = editModel.FirstName;
             dataItem.LastName = editModel.LastName;
             dataItem.Title = editModel.Title;
             dataItem.HireDate = editModel.HireDate;
+            dataItem.EmployeeId = editModel.EmployeeId;
             // Post changes to the database.
             if (e.IsNew)
                 await Northwind.AddAsync(dataItem);

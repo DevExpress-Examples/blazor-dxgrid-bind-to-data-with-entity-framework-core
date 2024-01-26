@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace BindToData.Models;
 
 public partial class Employee {
     public int EmployeeId { get; set; }
+    [Required]
     public string LastName { get; set; } = null!;
+    [Required]
     public string FirstName { get; set; } = null!;
     public string? Title { get; set; }
     public string? TitleOfCourtesy { get; set; }
