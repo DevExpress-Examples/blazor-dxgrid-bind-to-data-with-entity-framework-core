@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "BindToData": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:2023;http://localhost:2024"
+    }
+  }
+}
